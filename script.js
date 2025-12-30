@@ -24,7 +24,14 @@ function checkPuzzle() {
 
       const music = document.getElementById("bgMusic");
       music.volume = 0.2;
-      music.play();
+      music.play().catch(() => {
+       
+        document.body.addEventListener(
+          "click",
+          () => music.play(),
+          { once: true }
+        );
+      });
 
       startCounter();
     }, 800);
