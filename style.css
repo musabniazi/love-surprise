@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* MAIN CARD */
+.container {
+  width: 90%;
+  max-width: 650px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+  animation: fadeIn 1.2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+
+/* INPUTS & BUTTONS */
+input {
+  padding: 10px;
+  width: 80%;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  outline: none;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: white;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255,255,255,0.3);
+}
+
+/* COUNTER */
+.counter {
+  margin: 25px 0;
+}
+
+.counter span {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+/* STORY TEXT */
+.story {
+  margin-top: 20px;
+  line-height: 1.7;
+  animation: fadeIn 2s ease;
+}
+
+/* FINAL SECTION */
+.final {
+  margin-top: 35px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 20px;
+}
+
+/* FOOTER NOTE */
+.footer-note {
+  margin-top: 25px;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+/* ERRORS */
+#error, #puzzleError {
+  margin-top: 10px;
+}
+
+/* HEARTS BACKGROUND */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hearts::before,
+.hearts::after {
+  content: "❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤";
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.08;
+  animation: floatHearts 18s linear infinite;
+}
+
+.hearts::after {
+  animation-delay: 9s;
+}
+
+/* ANIMATIONS */
+@keyframes floatHearts {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(120vh); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

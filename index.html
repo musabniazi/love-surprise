@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You — New Year 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEARTS BACKGROUND -->
+  <div class="hearts"></div>
+
+  <!-- MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+
+    <!-- PASSWORD -->
+    <div id="passwordBox">
+      <h2>Private Access</h2>
+      <input type="password" id="passwordInput" placeholder="Password">
+      <button onclick="checkPassword()">Enter</button>
+      <p id="error"></p>
+      <p style="font-size:0.8em; opacity:0.6;">
+        (Sound will start after access)
+      </p>
+    </div>
+
+    <!-- PUZZLE -->
+    <div id="puzzleBox" class="hidden">
+      <h2>A Small Memory Test</h2>
+      <p>
+        We met for the first time, and the very next day  
+        we met again for exactly how many hours?
+      </p>
+      <input type="number" id="puzzleInput" placeholder="Hours">
+      <button onclick="checkPuzzle()">Submit</button>
+      <p id="puzzleError"></p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="mainContent" class="hidden">
+
+      <h1>450 Days With You</h1>
+
+      <div class="counter">
+        <p><span id="days">0</span> Days</p>
+        <p><span id="hours">0</span> Hours</p>
+        <p><span id="minutes">0</span> Minutes</p>
+      </div>
+
+      <div class="story">
+        <p>
+          450 days ago, two strangers crossed paths without knowing
+          that time was about to change its meaning for them.
+        </p>
+
+        <p>
+          He didn’t plan love.  
+          She didn’t expect it.  
+          Yet somehow, effort quietly replaced fear.
+        </p>
+
+        <p>
+          Between laughs, misunderstandings, silence, and growth,
+          something real was built — not perfect, but honest.
+        </p>
+
+        <p>
+          Laiba, this is not about grand promises.
+          This is about choosing you every day,
+          even when days are difficult.
+        </p>
+
+        <p>
+          And Niazi will always choose effort over excuses,
+          understanding over ego,
+          and you over anything temporary.
+        </p>
+      </div>
+
+      <div class="final">
+        <h2>New Year 2026</h2>
+        <p>
+          If time restarted tonight,  
+          I would still choose you — without hesitation.
+        </p>
+        <p>
+          Happy New Year, my Awan.  
+          — Yours, Niazi
+        </p>
+
+        <p>
+          <a href="special.html" target="_blank" style="color:#ff9efc; text-decoration:underline;">
+            Click here for a special personal message 💌
+          </a>
+        </p>
+      </div>
+
+      <!-- FOOTER NOTE -->
+      <div class="footer-note">
+        Made with patience, effort & love.
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
